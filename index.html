@@ -3,86 +3,123 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LIK AI - Where AI Meets Real Connection</title>
+<title>Aastha Creation | Handmade Candles</title>
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
 body{
-background:#0f172a;
-color:white;
+    background:#fff8f2;
+    color:#333;
 }
 
 header{
-padding:20px;
-text-align:center;
+    background:linear-gradient(135deg,#f6c7d2,#fff8f2);
+    text-align:center;
+    padding:80px 20px;
 }
 
-.logo{
-font-size:32px;
-font-weight:bold;
-color:#60a5fa;
+header h1{
+    font-size:3rem;
+    color:#e78ca8;
 }
 
-.hero{
-height:80vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
-
-.hero h1{
-font-size:60px;
-background:linear-gradient(90deg,#60a5fa,#a855f7);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:22px;
-margin-bottom:30px;
+header p{
+    margin-top:15px;
+    font-size:1.2rem;
 }
 
 .btn{
-background:#2563eb;
-color:white;
-padding:15px 30px;
-border-radius:10px;
-text-decoration:none;
-font-weight:bold;
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 25px;
+    background:#e78ca8;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
 }
 
-.features{
-padding:60px 20px;
-text-align:center;
+section{
+    padding:60px 10%;
 }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-margin-top:30px;
+.section-title{
+    text-align:center;
+    color:#e78ca8;
+    margin-bottom:40px;
+    font-size:2rem;
+}
+
+.about{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
 .card{
-background:#1e293b;
-padding:20px;
-border-radius:15px;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.card h3{
+    margin:15px 0;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.feature{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:15px;
+}
+
+.contact{
+    text-align:center;
 }
 
 footer{
-text-align:center;
-padding:30px;
-background:#020617;
+    background:#e78ca8;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:15px 20px;
+    border-radius:50px;
+    font-weight:bold;
 }
 </style>
 </head>
@@ -90,46 +127,98 @@ background:#020617;
 <body>
 
 <header>
-<div class="logo">LIK AI</div>
+    <h1>Aastha Creation</h1>
+    <p>Beautiful Handmade Candles Crafted With Love</p>
+
+    <a href="#contact" class="btn">Order Now</a>
 </header>
 
-<section class="hero">
-<h1>LIK AI</h1>
-<p>Where AI Meets Real Connection</p>
-<a href="https://forms.gle/fk6ZN4pSzLz1duTq5" class="btn" target="_blank">Join Early Access</a>
+<section>
+    <h2 class="section-title">About Us</h2>
+
+    <div class="about">
+        <p>
+            Aastha Creation specializes in handmade decorative candles,
+            gift candles, rose candles, tulip candles, teddy candles,
+            and customized candle gifts for every special occasion.
+        </p>
+    </div>
 </section>
 
-<section class="features">
-<h2>Our Features</h2>
+<section>
+    <h2 class="section-title">Our Products</h2>
 
-<div class="cards">
+    <div class="products">
 
-<div class="card">
-<h3>🤖 AI Chat</h3>
-<p>Smart AI conversations.</p>
-</div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?w=600" alt="">
+            <h3>Rose Candles</h3>
+            <p>Elegant handcrafted rose-shaped candles.</p>
+        </div>
 
-<div class="card">
-<h3>🎨 AI Images</h3>
-<p>Create stunning visuals.</p>
-</div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1602872030219-ad2b9f4fbf54?w=600" alt="">
+            <h3>Tulip Candles</h3>
+            <p>Beautiful tulip bouquet candles for gifting.</p>
+        </div>
 
-<div class="card">
-<h3>💼 Business Assistant</h3>
-<p>Grow your business with AI.</p>
-</div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600" alt="">
+            <h3>Custom Orders</h3>
+            <p>Personalized candles for birthdays and weddings.</p>
+        </div>
 
-<div class="card">
-<h3>🌐 Website Builder</h3>
-<p>Create websites faster.</p>
-</div>
+    </div>
+</section>
 
-</div>
+<section>
+    <h2 class="section-title">Why Choose Us?</h2>
+
+    <div class="features">
+
+        <div class="feature">
+            <h3>Handmade</h3>
+            <p>Every candle is handcrafted with care.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Premium Quality</h3>
+            <p>Made using quality wax and materials.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Custom Designs</h3>
+            <p>Personalized candles for any event.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Perfect Gifts</h3>
+            <p>Ideal for birthdays, weddings and festivals.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="contact">
+        <p><strong>Instagram:</strong> @_aasthacreation_29</p>
+        <p><strong>WhatsApp:</strong> +91 YOUR_NUMBER</p>
+        <br>
+        <a class="btn" href="https://wa.me/91YOURNUMBER">
+            Order on WhatsApp
+        </a>
+    </div>
 </section>
 
 <footer>
-© 2026 LIK AI | Where AI Meets Real Connection
+    © 2026 Aastha Creation. All Rights Reserved.
 </footer>
+
+<a class="whatsapp" href="https://wa.me/91YOURNUMBER">
+    WhatsApp
+</a>
 
 </body>
   </html>
