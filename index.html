@@ -3,246 +3,298 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aastha Creation | Handmade Candles</title>
+
+<title>LiK - Relationship Intelligence</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
 }
 
 body{
-    background:#fff8f2;
-    color:#333;
+background:#0B0B0F;
+color:white;
+overflow-x:hidden;
 }
 
-header{
-    background:linear-gradient(135deg,#f6c7d2,#fff8f2);
-    text-align:center;
-    padding:80px 20px;
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:40px;
+position:relative;
 }
 
-header h1{
-    font-size:3rem;
-    color:#e78ca8;
+.blur1{
+position:absolute;
+width:500px;
+height:500px;
+background:#FF4D8D;
+filter:blur(180px);
+opacity:.25;
+top:-100px;
+left:-100px;
 }
 
-header p{
-    margin-top:15px;
-    font-size:1.2rem;
+.blur2{
+position:absolute;
+width:500px;
+height:500px;
+background:#6C63FF;
+filter:blur(180px);
+opacity:.25;
+bottom:-100px;
+right:-100px;
+}
+
+.container{
+max-width:1200px;
+width:100%;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+z-index:2;
+}
+
+.badge{
+display:inline-block;
+padding:10px 18px;
+border:1px solid rgba(255,255,255,.15);
+border-radius:50px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(10px);
+margin-bottom:25px;
+font-size:14px;
+}
+
+h1{
+font-size:68px;
+line-height:1.05;
+font-weight:800;
+margin-bottom:25px;
+}
+
+.gradient{
+background:linear-gradient(90deg,#ff4d8d,#8f6fff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+p{
+font-size:20px;
+color:#B5B5C3;
+line-height:1.8;
+margin-bottom:35px;
+}
+
+.buttons{
+display:flex;
+gap:16px;
 }
 
 .btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:12px 25px;
-    background:#e78ca8;
-    color:white;
-    text-decoration:none;
-    border-radius:30px;
+padding:16px 28px;
+border-radius:16px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
 }
 
-section{
-    padding:60px 10%;
+.primary{
+background:linear-gradient(135deg,#ff4d8d,#8f6fff);
+color:white;
 }
 
-.section-title{
-    text-align:center;
-    color:#e78ca8;
-    margin-bottom:40px;
-    font-size:2rem;
+.primary:hover{
+transform:translateY(-3px);
 }
 
-.about{
-    text-align:center;
-    max-width:800px;
-    margin:auto;
+.secondary{
+border:1px solid rgba(255,255,255,.15);
+color:white;
+background:rgba(255,255,255,.04);
 }
 
-.products{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+.phone{
+display:flex;
+justify-content:center;
 }
 
-.card{
-    background:white;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
-    text-align:center;
+.mockup{
+width:330px;
+height:650px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(20px);
+border-radius:40px;
+padding:18px;
+border:1px solid rgba(255,255,255,.1);
+box-shadow:0 20px 60px rgba(0,0,0,.4);
 }
 
-.card img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    border-radius:10px;
+.profile{
+height:100%;
+border-radius:30px;
+background:url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800');
+background-size:cover;
+background-position:center;
+position:relative;
+overflow:hidden;
 }
 
-.card h3{
-    margin:15px 0;
+.overlay{
+position:absolute;
+bottom:0;
+left:0;
+right:0;
+padding:25px;
+background:linear-gradient(transparent,rgba(0,0,0,.95));
 }
 
-.features{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+.name{
+font-size:28px;
+font-weight:700;
 }
 
-.feature{
-    background:white;
-    padding:25px;
-    text-align:center;
-    border-radius:15px;
+.compatibility{
+margin-top:12px;
+display:inline-block;
+padding:10px 16px;
+background:rgba(255,255,255,.15);
+border-radius:12px;
+font-size:14px;
 }
 
-.contact{
-    text-align:center;
+.stats{
+display:flex;
+gap:15px;
+margin-top:20px;
 }
 
-footer{
-    background:#e78ca8;
-    color:white;
-    text-align:center;
-    padding:20px;
+.stat{
+flex:1;
+background:rgba(255,255,255,.12);
+padding:12px;
+border-radius:14px;
+text-align:center;
 }
 
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    padding:15px 20px;
-    border-radius:50px;
-    font-weight:bold;
-}.logo{
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    object-fit:cover;
-    display:block;
-    margin:0 auto 20px;
-    }
+.number{
+font-size:22px;
+font-weight:700;
+}
+
+.label{
+font-size:12px;
+opacity:.7;
+}
+
+@media(max-width:900px){
+
+.container{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.buttons{
+justify-content:center;
+}
+
+h1{
+font-size:48px;
+}
+
+.phone{
+margin-top:20px;
+}
+}
 </style>
 </head>
-
 <body>
 
-<header>
+<div class="blur1"></div>
+<div class="blur2"></div>
 
-    <img src="logo.png"
-         alt="Aastha Creation Logo"
-         class="logo">
+<section class="hero">
 
-    <h1>Aastha Creation</h1>
+<div class="container">
 
-    <p>Beautiful Handmade Candles Crafted With Love</p>
+<div>
 
-    <a href="#contact" class="btn">Order Now</a>
+<div class="badge">
+❤️ Relationship Intelligence Powered by AI
+</div>
 
-</header>
+<h1>
+Find Connections That
+<span class="gradient">Actually Last</span>
+</h1>
 
-<section>
-    <h2 class="section-title">About Us</h2>
+<p>
+LiK goes beyond swiping. Our AI analyzes compatibility,
+communication style, values, and relationship potential
+to help you build meaningful connections.
+</p>
 
-    <div class="about">
-        <p>
-            Aastha Creation specializes in handmade decorative candles,
-            gift candles, rose candles, tulip candles, teddy candles,
-            and customized candle gifts for every special occasion.
-        </p>
-    </div>
-</section>
+<div class="buttons">
+<a href="#" class="btn primary">Get Started</a>
+<a href="#" class="btn secondary">How LiK Works</a>
+</div>
 
-<section>
-    <h2 class="section-title">Our Products</h2>
+</div>
 
-    <div class="products">
+<div class="phone">
 
-        <div class="card">
-            <img src="IMG_20260602_192540_796.jpg" alt="">
-            <h3>Rose Candles</h3>
-            <p>Elegant handcrafted rose-shaped candles.</p>
-        </div>
+<div class="mockup">
 
-        <div class="card">
-            <img src="IMG_20260602_193615_987.jpg" alt="">
-            <h3>Bouquet Candles</h3>
-            <p>Beautiful  bouquet candles for gifting.</p>
-        </div>
+<div class="profile">
 
-        <div class="card">
-            <img src="IMG_20260602_192459_653.jpg" alt="">
-            <h3>Custom Orders</h3>
-            <p>Personalized candles for birthdays and weddings.</p>
-        </div>
+<div class="overlay">
 
-    </div>
-</section>
-          <div class="feature">
-            <h3>Premium Quality</h3>
-            <p>Made using quality wax and materials.</p>
-        </div>
+<div class="name">
+Priya, 24
+</div>
 
-        <div class="feature">
-            <h3>Custom Designs</h3>
-            <p>Personalized candles for any event.</p>
-        </div>
+<div class="compatibility">
+💜 94% Compatibility Match
+</div>
 
-        <div class="feature">
-            <h3>Perfect Gifts</h3>
-            <p>Ideal for birthdays, weddings and festivals.</p>
-        </div>
+<div class="stats">
 
-    </div>
-</section>
+<div class="stat">
+<div class="number">88</div>
+<div class="label">Trust</div>
+</div>
 
-<section id="contact">
-    <h2 class="section-title">Contact Us</h2>
+<div class="stat">
+<div class="number">95</div>
+<div class="label">Values</div>
+</div>
 
-    <div class="contact">
-        <a class="call-btn" href="tel:+917038893555"
-            href="tel:+917038893555"
-         style="background:#0A66C2;
-    color:white;
-    padding:12px 24px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-    margin-top:15px;">
-            📞Call Now
-        </a>
-<a class="btn"
-href="https://www.instagram.com/_aasthacreation_29?igsh=aHdueTdhanFtejN4"
-target="_blank">
-Follow Us on Instagram
-</a>
-        <a class="btn" href="https://wa.me/91YOURNUMBER"
-         href="https://wa.me/91YOURNUMBER"
-style="background:#25D366;color:white;padding:12px 24px;border-radius:30px;text-decoration:none;">
-    Order on WhatsApp
-        </a>
-            
-    
-        
-        
-    </div>
+<div class="stat">
+<div class="number">92</div>
+<div class="label">Communication</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
-
-<footer>
-    © 2026 Aastha Creation. All Rights Reserved.
-    Create by patilbhavesh__
-</footer>
-
-<a class="whatsapp" href="https://whatsapp.com/dl/">
-    WhatsApp
-</a>
 
 </body>
-  </html>
+    </html>
