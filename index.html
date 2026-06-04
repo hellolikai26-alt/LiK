@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>LiK - Relationship Intelligence</title>
+<title>LiK AI | Relationship Intelligence Platform</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -16,87 +17,138 @@ box-sizing:border-box;
 font-family:'Inter',sans-serif;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
-background:#0B0B0F;
+background:#06060B;
 color:white;
 overflow-x:hidden;
 }
 
-.hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:40px;
-position:relative;
+/* Background */
+
+.bg-glow1{
+position:fixed;
+width:600px;
+height:600px;
+background:#ff4d8d;
+filter:blur(250px);
+opacity:.12;
+top:-150px;
+left:-150px;
+z-index:-1;
 }
 
-.blur1{
-position:absolute;
-width:500px;
-height:500px;
-background:#FF4D8D;
-filter:blur(180px);
-opacity:.25;
-top:-100px;
-left:-100px;
+.bg-glow2{
+position:fixed;
+width:700px;
+height:700px;
+background:#6f5cff;
+filter:blur(250px);
+opacity:.12;
+bottom:-250px;
+right:-200px;
+z-index:-1;
 }
 
-.blur2{
-position:absolute;
-width:500px;
-height:500px;
-background:#6C63FF;
-filter:blur(180px);
-opacity:.25;
-bottom:-100px;
-right:-100px;
-}
+/* Navbar */
 
-.container{
-max-width:1200px;
+nav{
 width:100%;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
+padding:25px 8%;
+display:flex;
+justify-content:space-between;
 align-items:center;
-z-index:2;
+position:fixed;
+top:0;
+z-index:1000;
+backdrop-filter:blur(20px);
+background:rgba(6,6,11,.5);
 }
 
-.badge{
-display:inline-block;
-padding:10px 18px;
-border:1px solid rgba(255,255,255,.15);
-border-radius:50px;
-background:rgba(255,255,255,.05);
-backdrop-filter:blur(10px);
-margin-bottom:25px;
-font-size:14px;
+.logo{
+font-size:28px;
+font-weight:900;
 }
 
-h1{
-font-size:68px;
-line-height:1.05;
-font-weight:800;
-margin-bottom:25px;
-}
-
-.gradient{
+.logo span{
 background:linear-gradient(90deg,#ff4d8d,#8f6fff);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
-p{
-font-size:20px;
-color:#B5B5C3;
+.nav-btn{
+padding:12px 22px;
+border-radius:12px;
+text-decoration:none;
+color:white;
+background:linear-gradient(135deg,#ff4d8d,#8f6fff);
+font-weight:600;
+}
+
+/* Hero */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:120px 8% 80px;
+}
+
+.hero-container{
+max-width:1300px;
+margin:auto;
+width:100%;
+display:grid;
+grid-template-columns:1.1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+.badge{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:10px 18px;
+border-radius:50px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+margin-bottom:25px;
+font-size:14px;
+color:#ddd;
+}
+
+.hero h1{
+font-size:72px;
+font-weight:900;
+line-height:1.05;
+margin-bottom:25px;
+}
+
+.gradient{
+background:linear-gradient(
+90deg,
+#ff4d8d,
+#8f6fff
+);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+font-size:21px;
+color:#b8b8c5;
 line-height:1.8;
+max-width:650px;
 margin-bottom:35px;
 }
 
 .buttons{
 display:flex;
-gap:16px;
+gap:18px;
+margin-bottom:25px;
 }
 
 .btn{
@@ -108,122 +160,218 @@ transition:.3s;
 }
 
 .primary{
-background:linear-gradient(135deg,#ff4d8d,#8f6fff);
+background:linear-gradient(
+135deg,
+#ff4d8d,
+#8f6fff
+);
 color:white;
-}
-
-.primary:hover{
-transform:translateY(-3px);
 }
 
 .secondary{
-border:1px solid rgba(255,255,255,.15);
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
 color:white;
-background:rgba(255,255,255,.04);
 }
 
-.phone{
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.trust-row{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+color:#999;
+font-size:14px;
+}
+
+/* Dashboard */
+
+.dashboard-container{
 display:flex;
 justify-content:center;
 }
 
-.mockup{
-width:330px;
-height:650px;
-background:rgba(255,255,255,.05);
-backdrop-filter:blur(20px);
-border-radius:40px;
-padding:18px;
-border:1px solid rgba(255,255,255,.1);
-box-shadow:0 20px 60px rgba(0,0,0,.4);
-}
-
-.profile{
-height:100%;
-border-radius:30px;
-background:url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800');
-background-size:cover;
-background-position:center;
-position:relative;
-overflow:hidden;
-}
-
-.overlay{
-position:absolute;
-bottom:0;
-left:0;
-right:0;
+.dashboard{
+width:100%;
+max-width:450px;
 padding:25px;
-background:linear-gradient(transparent,rgba(0,0,0,.95));
+border-radius:35px;
+background:rgba(255,255,255,.04);
+backdrop-filter:blur(25px);
+border:1px solid rgba(255,255,255,.08);
+box-shadow:0 20px 50px rgba(0,0,0,.4);
 }
 
-.name{
-font-size:28px;
-font-weight:700;
-}
-
-.compatibility{
-margin-top:12px;
-display:inline-block;
-padding:10px 16px;
-background:rgba(255,255,255,.15);
-border-radius:12px;
-font-size:14px;
-}
-
-.stats{
-display:flex;
-gap:15px;
-margin-top:20px;
-}
-
-.stat{
-flex:1;
-background:rgba(255,255,255,.12);
-padding:12px;
-border-radius:14px;
+.top-score{
 text-align:center;
+padding:30px;
+border-radius:25px;
+background:linear-gradient(
+135deg,
+rgba(255,77,141,.2),
+rgba(143,111,255,.2)
+);
+margin-bottom:18px;
 }
 
-.number{
+.top-score h2{
+font-size:80px;
+font-weight:900;
+background:linear-gradient(
+90deg,
+#ff4d8d,
+#8f6fff
+);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.top-score span{
+color:#c4c4d0;
+}
+
+.metric-card{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px;
+border-radius:18px;
+background:rgba(255,255,255,.05);
+margin-bottom:12px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.metric-card span{
+color:#d6d6df;
+}
+
+.metric-card strong{
 font-size:22px;
-font-weight:700;
 }
 
-.label{
-font-size:12px;
-opacity:.7;
+.ai-card{
+margin-top:18px;
+padding:20px;
+border-radius:18px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
 }
 
-@media(max-width:900px){
+.ai-card h4{
+margin-bottom:10px;
+color:#ff69b4;
+}
 
-.container{
+.ai-card p{
+font-size:15px;
+line-height:1.7;
+color:#bdbdc9;
+}
+
+/* Features */
+
+.features{
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:48px;
+margin-bottom:60px;
+font-weight:800;
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.feature-card{
+padding:30px;
+border-radius:24px;
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.08);
+}
+
+.feature-card h3{
+margin-bottom:15px;
+font-size:22px;
+}
+
+.feature-card p{
+color:#aaa;
+line-height:1.7;
+}
+
+/* Footer */
+
+footer{
+padding:40px;
+text-align:center;
+color:#888;
+border-top:1px solid rgba(255,255,255,.08);
+margin-top:60px;
+}
+
+/* Mobile */
+
+@media(max-width:950px){
+
+.hero-container{
 grid-template-columns:1fr;
 text-align:center;
+}
+
+.hero h1{
+font-size:52px;
+}
+
+.hero p{
+margin:auto;
+margin-bottom:30px;
 }
 
 .buttons{
 justify-content:center;
 }
 
-h1{
-font-size:48px;
+.trust-row{
+justify-content:center;
 }
 
-.phone{
+.dashboard{
 margin-top:20px;
 }
+
+.section-title{
+font-size:36px;
 }
+
+}
+
 </style>
 </head>
 <body>
 
-<div class="blur1"></div>
-<div class="blur2"></div>
+<div class="bg-glow1"></div>
+<div class="bg-glow2"></div>
+
+<nav>
+<div class="logo">
+LiK <span>AI</span>
+</div>
+
+<a href="#" class="nav-btn">
+Join Waitlist
+</a>
+</nav>
 
 <section class="hero">
 
-<div class="container">
+<div class="hero-container">
 
 <div>
 
@@ -232,60 +380,76 @@ margin-top:20px;
 </div>
 
 <h1>
-Find Connections That
-<span class="gradient">Actually Last</span>
+AI That Understands
+<span class="gradient">
+Relationships
+</span>
 </h1>
 
 <p>
-LiK goes beyond swiping. Our AI analyzes compatibility,
-communication style, values, and relationship potential
-to help you build meaningful connections.
+Discover compatibility, trust, communication patterns,
+and long-term relationship potential with LiK's
+Relationship Intelligence Engine.
 </p>
 
 <div class="buttons">
-<a href="#" class="btn primary">Get Started</a>
-<a href="#" class="btn secondary">How LiK Works</a>
+
+<a href="#" class="btn primary">
+Take Compatibility Test
+</a>
+
+<a href="#" class="btn secondary">
+See Demo
+</a>
+
+</div>
+
+<div class="trust-row">
+<span>✓ AI Powered</span>
+<span>✓ Privacy First</span>
+<span>✓ Science Based</span>
+<span>✓ Relationship Focused</span>
 </div>
 
 </div>
 
-<div class="phone">
+<div class="dashboard-container">
 
-<div class="mockup">
+<div class="dashboard">
 
-<div class="profile">
-
-<div class="overlay">
-
-<div class="name">
-Priya, 24
+<div class="top-score">
+<h2>94%</h2>
+<span>Compatibility Score</span>
 </div>
 
-<div class="compatibility">
-💜 94% Compatibility Match
+<div class="metric-card">
+<span>❤️ Trust</span>
+<strong>88%</strong>
 </div>
 
-<div class="stats">
-
-<div class="stat">
-<div class="number">88</div>
-<div class="label">Trust</div>
+<div class="metric-card">
+<span>🧠 Communication</span>
+<strong>92%</strong>
 </div>
 
-<div class="stat">
-<div class="number">95</div>
-<div class="label">Values</div>
+<div class="metric-card">
+<span>🌟 Values Alignment</span>
+<strong>95%</strong>
 </div>
 
-<div class="stat">
-<div class="number">92</div>
-<div class="label">Communication</div>
+<div class="metric-card">
+<span>🤝 Conflict Resolution</span>
+<strong>90%</strong>
 </div>
 
-</div>
-
-</div>
-
+<div class="ai-card">
+<h4>AI Relationship Insight</h4>
+<p>
+Strong long-term compatibility detected.
+Shared values, emotional maturity and
+healthy communication patterns indicate
+high relationship potential.
+</p>
 </div>
 
 </div>
@@ -296,5 +460,49 @@ Priya, 24
 
 </section>
 
+<section class="features">
+
+<h2 class="section-title">
+Why Choose <span class="gradient">LiK?</span>
+</h2>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+<h3>🧠 AI Compatibility</h3>
+<p>
+Advanced AI analyzes personality,
+communication style and values to
+identify meaningful connections.
+</p>
+</div>
+
+<div class="feature-card">
+<h3>❤️ Trust Intelligence</h3>
+<p>
+Measure trust alignment, emotional
+availability and long-term relationship
+potential.
+</p>
+</div>
+
+<div class="feature-card">
+<h3>📊 Deep Insights</h3>
+<p>
+Receive personalized relationship
+reports instead of endless swiping.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 LiK AI • Relationship Intelligence Platform
+
+</footer>
+
 </body>
-    </html>
+</html>
