@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LiK Assessment</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#06060B;
+color:white;
+padding:30px 20px;
+}
+
+.bg-glow1{
+position:fixed;
+width:500px;
+height:500px;
+background:#ff4d8d;
+filter:blur(220px);
+opacity:.12;
+top:-150px;
+left:-150px;
+z-index:-1;
+}
+
+.bg-glow2{
+position:fixed;
+width:500px;
+height:500px;
+background:#6f5cff;
+filter:blur(220px);
+opacity:.12;
+bottom:-150px;
+right:-150px;
+z-index:-1;
+}
+
+.container{
+max-width:800px;
+margin:auto;
+}
+
+.header{
+text-align:center;
+margin-bottom:40px;
+}
+
+.badge{
+display:inline-block;
+padding:10px 18px;
+border-radius:50px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+font-size:14px;
+margin-bottom:20px;
+}
+
+h1{
+font-size:48px;
+font-weight:800;
+margin-bottom:15px;
+}
+
+.gradient{
+background:linear-gradient(90deg,#ff4d8d,#8f6fff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.subtitle{
+color:#b5b5c3;
+font-size:18px;
+line-height:1.7;
+}
+
+.form-card{
+background:rgba(255,255,255,.04);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:30px;
+padding:30px;
+}
+
+.question{
+margin-bottom:25px;
+}
+
+label{
+display:block;
+margin-bottom:10px;
+font-weight:600;
+}
+
+input,
+select,
+textarea{
+width:100%;
+padding:15px;
+border:none;
+outline:none;
+border-radius:14px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+color:white;
+font-size:15px;
+}
+
+option{
+background:#111;
+}
+
+textarea{
+min-height:100px;
+resize:none;
+}
+
+button{
+width:100%;
+padding:18px;
+border:none;
+border-radius:16px;
+font-size:17px;
+font-weight:700;
+cursor:pointer;
+color:white;
+
+background:linear-gradient(
+135deg,
+#ff4d8d,
+#8f6fff
+);
+
+transition:.3s;
+}
+
+button:hover{
+transform:translateY(-3px);
+}
+
+.progress{
+text-align:center;
+margin-bottom:25px;
+color:#999;
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:34px;
+}
+
+.form-card{
+padding:20px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg-glow1"></div>
+<div class="bg-glow2"></div>
+
+<div class="container">
+
+<div class="header">
+
+<div class="badge">
+❤️ LiK Relationship Intelligence Assessment
+</div>
+
+<h1>
+Discover Your
+<span class="gradient">
+Relationship DNA
+</span>
+</h1>
+
+<p class="subtitle">
+Answer a few questions and receive your
+AI-powered relationship compatibility report.
+</p>
+
+</div>
+
+<div class="form-card">
+
+<div class="progress">
+15 Questions • 3 Minutes
+</div>
+
+<form action="report.html">
+
+<div class="question">
+<label>Full Name</label>
+<input type="text" required>
+</div>
+
+<div class="question">
+<label>Age</label>
+<input type="number" required>
+</div>
+
+<div class="question">
+<label>Gender</label>
+<select required>
+<option>Select</option>
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+</div>
+
+<div class="question">
+<label>City</label>
+<input type="text">
+</div>
+
+<div class="question">
+<label>1. What matters most in a relationship?</label>
+<select>
+<option>Trust</option>
+<option>Communication</option>
+<option>Loyalty</option>
+<option>Growth</option>
+</select>
+</div>
+
+<div class="question">
+<label>2. How do you handle conflicts?</label>
+<select>
+<option>Talk Immediately</option>
+<option>Take Time Then Discuss</option>
+<option>Avoid Confrontation</option>
+<option>Need Mediator</option>
+</select>
+</div>
+
+<div class="question">
+<label>3. Introvert or Extrovert?</label>
+<select>
+<option>Introvert</option>
+<option>Ambivert</option>
+<option>Extrovert</option>
+</select>
+</div>
+
+<div class="question">
+<label>4. Love Language?</label>
+<select>
+<option>Words of Affirmation</option>
+<option>Quality Time</option>
+<option>Acts of Service</option>
+<option>Physical Touch</option>
+<option>Gifts</option>
+</select>
+</div>
+
+<div class="question">
+<label>5. Career or Relationship Priority?</label>
+<select>
+<option>Career First</option>
+<option>Balanced</option>
+<option>Relationship First</option>
+</select>
+</div>
+
+<div class="question">
+<label>6. Planning or Spontaneous?</label>
+<select>
+<option>Planner</option>
+<option>Balanced</option>
+<option>Spontaneous</option>
+</select>
+</div>
+
+<div class="question">
+<label>7. How important is family approval?</label>
+<select>
+<option>Very Important</option>
+<option>Somewhat Important</option>
+<option>Not Important</option>
+</select>
+</div>
+
+<div class="question">
+<label>8. Communication Frequency?</label>
+<select>
+<option>Daily</option>
+<option>Few Times A Week</option>
+<option>
