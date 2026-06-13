@@ -229,36 +229,32 @@ Generated using LiK Relationship Intelligence Engine
 
 <div class="metric">
 <span>❤️ Trust</span>
-<strong>88%</strong>
+<strong id="trust">88%</strong>
 </div>
 
 <div class="metric">
 <span>🧠 Communication</span>
-<strong>92%</strong>
+<strong id="communication">92%</strong>
 </div>
 
 <div class="metric">
 <span>🌟 Values Alignment</span>
-<strong>95%</strong>
+<strong id="values">95%</strong>
 </div>
 
 <div class="metric">
 <span>🤝 Conflict Resolution</span>
-<strong>90%</strong>
-</div>
+<strong id="conflict">90%</strong>
+  </div>
 
 <div class="ai-insight">
 
 <h3>AI Insight</h3>
 
-<p>
-Your responses indicate strong long-term
-relationship potential. You value trust,
-communication and emotional maturity.
-The compatibility profile suggests healthy
-relationship patterns and high alignment
-with meaningful connections.
+<p id="insight">
+Your personalized LiK AI insight will appear here.
 </p>
+
 
 </div>
 
@@ -272,6 +268,40 @@ with meaningful connections.
 Join the LiK waitlist and be among the first
 to experience AI-powered relationship intelligence.
 </p>
+<input type="email" placeholder="Enter your email">
 
+<button>
+Join Waitlist
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("score").innerText =
+localStorage.getItem("likScore") || "91%";
+
+document.getElementById("trust").innerText =
+localStorage.getItem("trust") || "88%";
+
+document.getElementById("communication").innerText =
+localStorage.getItem("communication") || "92%";
+
+document.getElementById("values").innerText =
+localStorage.getItem("values") || "95%";
+
+document.getElementById("conflict").innerText =
+localStorage.getItem("conflict") || "90%";
+
+document.getElementById("insight").innerText =
+localStorage.getItem("insight") ||
+"You value trust, communication and emotional maturity, indicating strong long-term relationship potential.";
+
+</script>
+
+</body>
+</html>
 <input
 type="
