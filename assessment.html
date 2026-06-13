@@ -203,21 +203,21 @@ AI-powered relationship compatibility report.
 15 Questions • 3 Minutes
 </div>
 
-<form action="report.html">
+<form id="assessmentForm">
 
 <div class="question">
 <label>Full Name</label>
-<input type="text" required>
+<input id="name" type="text" required>
 </div>
 
 <div class="question">
 <label>Age</label>
-<input type="number" required>
+<input id="age" type="number" required>
 </div>
 
 <div class="question">
 <label>Gender</label>
-<select required>
+<select id="gender" required>
 <option>Select</option>
 <option>Male</option>
 <option>Female</option>
@@ -227,12 +227,12 @@ AI-powered relationship compatibility report.
 
 <div class="question">
 <label>City</label>
-<input type="text">
+<input id="city" type="text">
 </div>
 
 <div class="question">
 <label>1. What matters most in a relationship?</label>
-<select>
+  <select id="q1">
 <option>Trust</option>
 <option>Communication</option>
 <option>Loyalty</option>
@@ -242,7 +242,7 @@ AI-powered relationship compatibility report.
 
 <div class="question">
 <label>2. How do you handle conflicts?</label>
-<select>
+<select id="q2">
 <option>Talk Immediately</option>
 <option>Take Time Then Discuss</option>
 <option>Avoid Confrontation</option>
@@ -252,7 +252,7 @@ AI-powered relationship compatibility report.
 
 <div class="question">
 <label>3. Introvert or Extrovert?</label>
-<select>
+<select id="q3">
 <option>Introvert</option>
 <option>Ambivert</option>
 <option>Extrovert</option>
@@ -261,7 +261,7 @@ AI-powered relationship compatibility report.
 
 <div class="question">
 <label>4. Love Language?</label>
-<select>
+<select id="q4">
 <option>Words of Affirmation</option>
 <option>Quality Time</option>
 <option>Acts of Service</option>
@@ -272,7 +272,7 @@ AI-powered relationship compatibility report.
 
 <div class="question">
 <label>5. Career or Relationship Priority?</label>
-<select>
+<select id="q5">
 <option>Career First</option>
 <option>Balanced</option>
 <option>Relationship First</option>
@@ -281,7 +281,7 @@ AI-powered relationship compatibility report.
 
 <div class="question">
 <label>6. Planning or Spontaneous?</label>
-<select>
+<select id="q6">
 <option>Planner</option>
 <option>Balanced</option>
 <option>Spontaneous</option>
@@ -290,7 +290,7 @@ AI-powered relationship compatibility report.
 
 <div class="question">
 <label>7. How important is family approval?</label>
-<select>
+  <select id="q7">
 <option>Very Important</option>
 <option>Somewhat Important</option>
 <option>Not Important</option>
@@ -299,16 +299,16 @@ AI-powered relationship compatibility report.
 
 <div class="question">
 <label>8. Communication Frequency?</label>
-<select>
+<select id="q8">
 <option>Daily</option>
 <option>Few Times A Week</option>
-<option><option>Weekly</option>
+<option>Weekly</option>
 </select>
 </div>
 
 <div class="question">
 <label>9. How do you express affection?</label>
-<select>
+<select id="q9">
 <option>Words</option>
 <option>Actions</option>
 <option>Time Together</option>
@@ -318,7 +318,7 @@ AI-powered relationship compatibility report.
 
 <div class="question">
 <label>10. Long-Term Goal?</label>
-<select>
+<select id="q10">
 <option>Marriage</option>
 <option>Serious Relationship</option>
 <option>Exploring</option>
@@ -367,6 +367,42 @@ Get My Relationship Report →
 </div>
 
 </div>
+  <script>
+
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwuqlWCq77onmX-O3sACwp6er4rLr7PMloh5rd-xavSgNNhpAPxG2H-cXAA77-vc269/exec";
+
+document.getElementById("assessmentForm").addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    const data = {
+        name: document.getElementById("name").value,
+        age: document.getElementById("age").value,
+        gender: document.getElementById("gender").value,
+        city: document.getElementById("city").value,
+
+        q1: document.getElementById("q1").value,
+        q2: document.getElementById("q2").value,
+        q3: document.getElementById("q3").value,
+        q4: document.getElementById("q4").value,
+        q5: document.getElementById("q5").value,
+        q6: document.getElementById("q6").value,
+        q7: document.getElementById("q7").value,
+        q8: document.getElementById("q8").value,
+        q9: document.getElementById("q9").value,
+        q10: document.getElementById("q10").value
+    };
+
+    await fetch(SCRIPT_URL,{
+        method:"POST",
+        body:JSON.stringify(data)
+    });
+
+    window.location.href="report.html";
+
+});
+
+  </script>
 
 </body>
   </html>
