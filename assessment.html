@@ -393,12 +393,17 @@ document.getElementById("assessmentForm").addEventListener("submit", async funct
         q10: document.getElementById("q10").value
     };
 
+    try{
     await fetch(SCRIPT_URL,{
         method:"POST",
-        body:JSON.stringify(data)
+        body:JSON.stringify(data),
+        mode:"no-cors"
     });
+}catch(error){
+    console.log(error);
+    }
 
-    w// Simple LiK Intelligence Engine
+    // Simple LiK Intelligence Engine
 
 let trust = 85;
 let communication = 85;
