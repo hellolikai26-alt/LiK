@@ -398,7 +398,45 @@ document.getElementById("assessmentForm").addEventListener("submit", async funct
         body:JSON.stringify(data)
     });
 
-    window.location.href="report.html";
+    w// Simple LiK Intelligence Engine
+
+let trust = 85;
+let communication = 85;
+let values = 85;
+let conflict = 85;
+
+if(data.q1 === "Trust") trust += 10;
+if(data.q2 === "Talk Immediately") communication += 8;
+if(data.q5 === "Balanced") values += 5;
+if(data.q6 === "Planner") conflict += 5;
+
+let score = Math.round(
+(trust + communication + values + conflict) / 4
+);
+
+let insight = "";
+
+if(score >= 90){
+    insight =
+    "You value trust, honesty and long-term commitment. Your relationship style shows excellent compatibility potential.";
+}
+else if(score >= 80){
+    insight =
+    "You have a balanced relationship style with good communication and strong personal values.";
+}
+else{
+    insight =
+    "You have unique relationship preferences. Working on communication and trust can strengthen future relationships.";
+}
+
+localStorage.setItem("likScore", score + "%");
+localStorage.setItem("trust", trust + "%");
+localStorage.setItem("communication", communication + "%");
+localStorage.setItem("values", values + "%");
+localStorage.setItem("conflict", conflict + "%");
+localStorage.setItem("insight", insight);
+
+window.location.href = "report.html";
 
 });
 
